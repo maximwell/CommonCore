@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_sp.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 17:58:10 by mmarhic           #+#    #+#             */
-/*   Updated: 2024/11/01 17:59:13 by mmarhic          ###   ########.fr       */
+/*   Created: 2024/10/22 15:26:15 by mmarhic           #+#    #+#             */
+/*   Updated: 2024/10/22 23:38:52 by mmarhic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "libft.h"
 
-void    ft_putchar_sp(char c, int count)
+void	ft_putnbr_sp(int nb, int count)
 {
-    write(1, &c, 1);
-    count++;
+	unsigned int	num;
+
+	if (num == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", count);
+		return;
+	}
+	else if (num < 0)
+	{
+		ft_putchar_sp('-', count);
+		ft_putnbr_sp(-num, count);
+	}
+	else
+	{
+		if (num > 9)
+			ft_putnbr_sp((num / 10), count);
+		ft_putchar_sp(('0' + num % 10), count);
+	}
 }

@@ -1,19 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_sp.c                                    :+:      :+:    :+:   */
+/*   ft_putptr_sp.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 17:58:10 by mmarhic           #+#    #+#             */
-/*   Updated: 2024/11/01 17:59:13 by mmarhic          ###   ########.fr       */
+/*   Created: 2024/11/04 03:19:32 by marvin            #+#    #+#             */
+/*   Updated: 2024/11/04 03:19:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
-void    ft_putchar_sp(char c, int count)
-{
-    write(1, &c, 1);
-    count++;
-}
+void    ft_putptr_sp()

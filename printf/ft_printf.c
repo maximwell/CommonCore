@@ -13,17 +13,29 @@
 #include "libftprintf.h"
 #include <stdarg.h>
 
-int	ft_checking(const char check, va_list va, int count)
+int    ft_checking(const char check, va_list va, int count)
 {
     if (check == 'c')
         ft_putchar_sp(va_arg(va, int), count);
     else if (check == 's')
         ft_putstr_sp(va_arg(va, char *), count);
+	else if (check == 'p')
+		ft_putptr_sp(va_arg(va, void *), count);
+	else if (check == 'd')
+		ft_putnbr_sp(va_arg(va, int), count);
+	else if (check == 'i')
+
+	else if (check == 'u')
+
+	else if (check == 'x')
+
+	else if (check == 'X')
+	
     else if (check == '%')
         ft_putchar_sp(check, count);
 }
 
-int	ft_printf(const char *format, ...)
+int    ft_printf(const char *format, ...)
 {
 	int count;
 	int i;

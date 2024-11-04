@@ -17,7 +17,7 @@ void	ft_putstr_sp(char *s, int count)
 
 	count = 0;
     i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		write(1, &s[i], 1);
 		count++;
