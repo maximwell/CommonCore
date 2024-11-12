@@ -21,16 +21,12 @@ int    ft_checking(const char check, va_list va, int count)
         ft_putstr_sp(va_arg(va, char *), count);
 	else if (check == 'p')
 		ft_putptr_sp(va_arg(va, void *), count);
-	else if (check == 'd')
+	else if (check == 'd' || check == 'i')
 		ft_putnbr_sp(va_arg(va, int), count);
-	else if (check == 'i')
-
 	else if (check == 'u')
 
-	else if (check == 'x')
-
-	else if (check == 'X')
-	
+	else if (check == 'x' || check == 'X')
+		
     else if (check == '%')
         ft_putchar_sp(check, count);
 }
