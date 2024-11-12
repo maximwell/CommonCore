@@ -6,14 +6,14 @@
 /*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:58:10 by mmarhic           #+#    #+#             */
-/*   Updated: 2024/11/01 17:59:13 by mmarhic          ###   ########.fr       */
+/*   Updated: 2024/11/12 20:43:26 by mmarhic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void    ft_putchar_sp(char c, int count)
+void	ft_putchar_sp(char c, int *count)
 {
-    write(1, &c, 1);
-    count++;
+	write(1, &c, 1);
+	count++;
 }

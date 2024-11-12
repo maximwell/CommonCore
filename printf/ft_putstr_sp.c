@@ -6,21 +6,21 @@
 /*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 19:16:13 by mmarhic           #+#    #+#             */
-/*   Updated: 2024/11/01 19:18:46 by mmarhic          ###   ########.fr       */
+/*   Updated: 2024/11/12 20:44:16 by mmarhic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr_sp(char *s, int count)
-{
-	int	count;
-    int i;
+#include "libftprintf.h"
 
-	count = 0;
-    i = 0;
+void	ft_putstr_sp(char *s, int *count)
+{
+	int		i;
+
+	i = 0;
 	while (s[i] != '\0')
 	{
 		write(1, &s[i], 1);
 		count++;
-        i++;
+		i++;
 	}
 }

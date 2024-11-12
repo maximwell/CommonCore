@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_sp.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:26:15 by mmarhic           #+#    #+#             */
-/*   Updated: 2024/10/22 23:38:52 by mmarhic          ###   ########.fr       */
+/*   Updated: 2024/11/12 20:00:04 by mmarhic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	ft_putnbr_sp(int nb, int count)
+void	ft_putnbr_sp(int nb, int *count)
 {
-	unsigned int	num;
-
-	if (num == -2147483648)
+	if (nb == -2147483648)
 	{
-		ft_putstr_fd("-2147483648", count);
-		return;
+		ft_putstr_sp("-2147483648", count);
+		return ;
 	}
-	else if (num < 0)
+	else if (nb < 0)
 	{
 		ft_putchar_sp('-', count);
-		ft_putnbr_sp(-num, count);
+		ft_putnbr_sp(-nb, count);
 	}
 	else
 	{
-		if (num > 9)
-			ft_putnbr_sp((num / 10), count);
-		ft_putchar_sp(('0' + num % 10), count);
+		if (nb > 9)
+			ft_putnbr_sp((nb / 10), count);
+		ft_putchar_sp(('0' + nb % 10), count);
 	}
 }
