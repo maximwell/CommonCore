@@ -6,7 +6,7 @@
 #    By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 17:21:41 by mmarhic           #+#    #+#              #
-#    Updated: 2024/11/12 20:08:54 by mmarhic          ###   ########.fr        #
+#    Updated: 2024/11/12 22:16:03 by mmarhic          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRC =		ft_printf.c \
             ft_putnbr_sp.c \
             ft_putnbr_unsigned_sp.c \
             ft_putptr_sp.c \
-            ft_putstr_sp.c
+            ft_putstr_sp.c \
+            ft_puthexa.c
 
 TEST_SRC = main.c
 TEST_OBJS = $(TEST_SRC:.c=.o)

@@ -6,11 +6,11 @@
 /*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:27:56 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/12 20:45:05 by mmarhic          ###   ########.fr       */
+/*   Updated: 2024/11/12 22:10:59 by mmarhic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_putnbr_unsigned_sp(unsigned int num, int *count)
 {

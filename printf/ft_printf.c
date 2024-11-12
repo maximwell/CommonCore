@@ -6,11 +6,11 @@
 /*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:10:59 by mmarhic           #+#    #+#             */
-/*   Updated: 2024/11/12 21:03:28 by mmarhic          ###   ########.fr       */
+/*   Updated: 2024/11/12 22:50:42 by mmarhic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdarg.h>
 
 int	ft_checking(const char check, va_list va, int *count)
@@ -28,9 +28,7 @@ int	ft_checking(const char check, va_list va, int *count)
 	else if (check == '%')
 		ft_putchar_sp(check, count);
 	else if (check == 'x' || check == 'X')
-	{
-		ft_puthexa(va_arg(va, char *), count, check);
-	}
+		ft_puthexa(va_arg(va, unsigned int), count, check);
 	return (0);
 }
 

@@ -6,11 +6,11 @@
 /*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 03:19:32 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/12 20:44:53 by mmarhic          ###   ########.fr       */
+/*   Updated: 2024/11/12 22:35:27 by mmarhic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_putptr_sp(void *ptr, int *count)
 {
@@ -21,6 +21,11 @@ void	ft_putptr_sp(void *ptr, int *count)
 
 	hex_digits = "0123456789abcdef";
 	adress = (unsigned long long)ptr;
+	if (adress == 0)
+	{
+		ft_putstr_sp("(nil)", count);
+		return ;
+	}
 	ft_putstr_sp("0x", count);
 	if (adress == 0)
 	{

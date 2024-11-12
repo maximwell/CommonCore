@@ -6,11 +6,11 @@
 /*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:26:15 by mmarhic           #+#    #+#             */
-/*   Updated: 2024/11/12 20:00:04 by mmarhic          ###   ########.fr       */
+/*   Updated: 2024/11/12 22:21:37 by mmarhic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_putnbr_sp(int nb, int *count)
 {
