@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: max <max@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 04:58:14 by marvin            #+#    #+#             */
-/*   Updated: 2024/12/06 04:58:14 by marvin           ###   ########.fr       */
+/*   Updated: 2024/12/18 00:09:48 by max              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_list
 
 t_list *create_node(int nombre);
 t_list *init_stack_a(int argc, char **argv);
+int ft_atoi(const char *str);
 
 
 
