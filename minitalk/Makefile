@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+         #
+#    By: maximmarhic <maximmarhic@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/25 17:00:00 by mmarhic           #+#    #+#              #
-#    Updated: 2025/03/25 17:00:00 by mmarhic          ###   ########.fr        #
+#    Updated: 2025/04/03 08:37:40 by maximmarhic      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
