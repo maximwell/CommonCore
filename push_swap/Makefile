@@ -6,7 +6,7 @@
 #    By: maximmarhic <maximmarhic@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 00:38:59 by maximmarhic       #+#    #+#              #
-#    Updated: 2025/04/08 12:22:15 by maximmarhic      ###   ########.fr        #
+#    Updated: 2025/04/08 18:04:46 by maximmarhic      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ INS_DIR		= instructions
 LIBFT_DIR	= ./libft
 LIBFT		= $(LIBFT_DIR)/libft.a
 
-SRC_FILES = main.c parser.c exit_error.c sort_three.c sort_five.c sort.c indexing.c \
+SRC_FILES = main.c parser.c parser_utils.c exit_error.c sort_three.c sort_five.c sort.c indexing.c \
 			$(INS_DIR)/swap.c $(INS_DIR)/push.c $(INS_DIR)/rotate.c $(INS_DIR)/reverse.c
 
 
