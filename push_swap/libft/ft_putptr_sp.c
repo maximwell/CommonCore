@@ -3,43 +3,54 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putptr_sp.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
+/*   By: maximmarhic <maximmarhic@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 03:19:32 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/12 22:35:27 by mmarhic          ###   ########.fr       */
+/*   Updated: 2025/04/08 17:08:09 by maximmarhic      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putptr_sp.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maximmarhic <maximmarhic@student.42.fr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/04 03:19:32 by marvin            #+#    #+#             */
+/*   Updated: 2025/04/08 16:36:30 by maximmarhic      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static void	write_hex(unsigned long long addr, int *count)
+{
+	char	buffer[16];
+	char	*base;
+	int		i;
+
+	base = "0123456789abcdef";
+	i = 0;
+	while (addr > 0)
+	{
+		buffer[i++] = base[addr % 16];
+		addr /= 16;
+	}
+	while (--i >= 0)
+		ft_putchar_sp(buffer[i], count);
+}
+
 void	ft_putptr_sp(void *ptr, int *count)
 {
-	unsigned long long	adress;
-	char				*hex_digits;
-	char				buffer[16];
-	int					i;
+	unsigned long long	addr;
 
-	hex_digits = "0123456789abcdef";
-	adress = (unsigned long long)ptr;
-	if (adress == 0)
+	addr = (unsigned long long)ptr;
+	if (addr == 0)
 	{
 		ft_putstr_sp("(nil)", count);
 		return ;
 	}
 	ft_putstr_sp("0x", count);
-	if (adress == 0)
-	{
-		ft_putchar_sp('0', count);
-		return ;
-	}
-	i = 0;
-	while (adress > 0)
-	{
-		buffer[i++] = hex_digits[adress % 16];
-		adress /= 16;
-	}
-	while (i > 0)
-	{
-		ft_putchar_sp(buffer[--i], count);
-	}
+	write_hex(addr, count);
 }

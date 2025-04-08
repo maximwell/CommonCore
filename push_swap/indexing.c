@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit_error.c                                       :+:      :+:    :+:   */
+/*   indexing.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maximmarhic <maximmarhic@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 03:08:42 by maximmarhic       #+#    #+#             */
-/*   Updated: 2025/04/08 16:31:30 by maximmarhic      ###   ########.fr       */
+/*   Created: 2025/04/08 00:37:17 by maximmarhic       #+#    #+#             */
+/*   Updated: 2025/04/08 02:35:49 by maximmarhic      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <unistd.h>
-#include <stdlib.h>
 
-void	free_stack(t_node **stack)
+void	assign_index(t_node *stack)
 {
-	t_node	*tmp;
+	t_node	*ptr1;
+	t_node	*ptr2;
+	int		index;
 
-	while (*stack)
+	ptr1 = stack;
+	while (ptr1)
 	{
-		tmp = *stack;
-		*stack = (*stack)->next;
-		free(tmp);
+		index = 0;
+		ptr2 = stack;
+		while (ptr2)
+		{
+			if (ptr1->value > ptr2->value)
+				index++;
+			ptr2 = ptr2->next;
+		}
+		ptr1->index = index;
+		ptr1 = ptr1->next;
 	}
-}
-
-void	exit_error(t_node **stack)
-{
-	write(2, "Error\n", 6);
-	free_stack(stack);
-	exit(1);
 }
