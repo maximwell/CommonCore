@@ -6,7 +6,7 @@
 /*   By: maximmarhic <maximmarhic@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 00:36:24 by maximmarhic       #+#    #+#             */
-/*   Updated: 2025/04/08 16:38:00 by maximmarhic      ###   ########.fr       */
+/*   Updated: 2025/04/08 19:58:47 by maximmarhic      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,28 +27,36 @@ int	get_stack_size(t_node *stack)
 
 void	sort_radix(t_node **a, t_node **b)
 {
-	int	i;
-	int	j;
-	int	size;
+	int		i;
+	int		j;
+	int		size;
+	int		max_bits;
+
+	assign_index(*a);
+	size = get_stack_size(*a);
+
+	max_bits = 0;
+	while ((size - 1) >> max_bits)
+		max_bits++;
 
 	i = 0;
-	size = get_stack_size(*a);
-	assign_index(*a);
-	while (!is_sorted(*a))
+	while (i < max_bits)
 	{
 		j = 0;
-		while (j++ < size)
+		while (j < size)
 		{
-			if (*a && (((*a)->index >> i) & 1))
-				ra(a);
-			else
+			if ((((*a)->index >> i) & 1) == 0)
 				pb(a, b);
+			else
+				ra(a);
+			j++;
 		}
 		while (*b)
 			pa(a, b);
 		i++;
 	}
 }
+
 
 void	sort_stack(t_node **a, t_node **b)
 {
