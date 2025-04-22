@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: maximmarhic <maximmarhic@student.42.fr>    +#+  +:+       +#+         #
+#    By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/10 09:54:58 by maximmarhic       #+#    #+#              #
-#    Updated: 2025/04/10 09:56:30 by maximmarhic      ###   ########.fr        #
+#    Updated: 2025/04/22 21:36:21 by mmarhic          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,12 @@ NAME	= fractol
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
-SRC		= fractol.c draw.c mandelbrot.c julia.c events.c utils.c
+SRC		= fractol.c draw.c mandelbrot.c julia.c events.c 
 OBJ		= $(SRC:.c=.o)
 
 MLX_DIR	= minilibx-linux
-MLX_FLAGS = -L$(MLX_DIR) -lmlx -framework OpenGL -framework AppKit
+MLX_FLAGS = -Lminilibx-linux -lmlx -lXext -lX11 -lm
+
 
 INCLUDES = -I. -I$(MLX_DIR)
 
