@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   events.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/23 12:06:29 by mmarhic           #+#    #+#             */
+/*   Updated: 2025/04/23 12:10:18 by mmarhic          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 #include <stdlib.h>
 
@@ -44,7 +56,9 @@ void	cleanup_and_exit(t_data *data)
 
 int	key_hook(int keycode, t_data *data)
 {
-	double speed = 0.05 / data->zoom; // Speed scales with zoom
+	double	speed;
+
+	speed = 0.1 / data->zoom;
 	if (keycode == 65307)
 		cleanup_and_exit(data);
 	else if (keycode == 65362)

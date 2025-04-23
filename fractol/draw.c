@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   draw.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmarhic <mmarhic@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/23 12:06:34 by mmarhic           #+#    #+#             */
+/*   Updated: 2025/04/23 12:07:50 by mmarhic          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 
 static void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
@@ -10,9 +22,9 @@ static void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 
 void	draw_mandelbrot(t_data *data)
 {
-	int		x;
-	int		y;
-	int		color;
+	int	x;
+	int	y;
+	int	color;
 
 	y = 0;
 	while (y < data->height)
@@ -31,9 +43,9 @@ void	draw_mandelbrot(t_data *data)
 
 void	draw_julia(t_data *data)
 {
-	int		x;
-	int		y;
-	int		color;
+	int	x;
+	int	y;
+	int	color;
 
 	y = 0;
 	while (y < data->height)
